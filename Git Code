@@ -1,0 +1,29 @@
+1.How to clone particular branch in azure repo to local
+
+1.git clone <repo_url>
+2.cd <repo name>
+3.git fetch --all  <--to fetch all branches
+3.1)git branch -r   <--to list remote branches
+
+4.git checkout <branch_name>
+5.git pull origin <branch_name>
+
+let's say ,they are three branches namely main,dev and test and you want to deal with 'test' branch without making changes like default in azure repo, Below is procedure
+ 
+1.git clone <repo_url>
+2.cd <repo name>
+3.git fetch --all  <--to fetch all branches
+
+4.git checkout test
+5.git pull origin test <--this command will pull data present in test branch from azure repo to local
+ 
+2.How to push changes to 'test' branch
+
+once you added code (files or some modification in existing files)
+
+1.git status
+2.git add .  or git add <mention specific file/folder name if required >
+3.git commit -m "add message here"
+4.git push origin <branch_name>  <--here branch name is test so it's git push origin test
+ 
+Note:One should should mention branch name for the first time if this branch(here 'test') is not default azure repo branch
